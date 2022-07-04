@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Plus Jakarta Sans';
+		src: url('/fonts/PlusJakartaSans[wght].ttf') format('truetype');
+		font-style: normal;
+		font-weight: 300 700;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Plus Jakarta Sans';
+		src: url('/fonts/PlusJakartaSans-Italic[wght].ttf') format('truetype');
+		font-style: italic;
+		font-weight: 300 700;
+		font-display: swap;
+	}
+
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-tap-highlight-color: transparent;
+		@apply tracking-tight;
+	}
+
+	:root {
+		color-scheme: dark;
+	}
+
+	html {
+		@apply font-display;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply text-white antialiased bg-gray-900;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	body #__nuxt {
+		@apply flex flex-col min-h-screen;
+	}
+
+	h1,
+	.h1-like {
+		@apply font-extrabold text-4xl;
+
+		&::after {
+			content: '_';
+			@apply text-primary;
+		}
+	}
+
+	@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.001ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.001ms !important;
+			transition-delay: 0s !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
