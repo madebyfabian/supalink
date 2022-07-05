@@ -40,7 +40,7 @@
 		return result
 	}
 
-	const url = ref('https://example.com')
+	const url = ref('')
 	const maxClicks = ref(100)
 
 	const handleSubmit = async () => {
