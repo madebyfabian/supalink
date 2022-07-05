@@ -1,6 +1,6 @@
 ![Cover Art](public/images/og_image.jpg?raw=true 'Cover Art')
 
-# supalink.cc – 👀 Share, engange and boom — link gone!
+# supalink.cc – 👀 Share, engage and boom — link gone!
 
 You want to share a shortlink for a limited amount of people,
 that destroys itsself after the maximum is reached?

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Head>
-			<Title>supalink — 👀 Share, engange and boom — link gone!</Title>
+			<Title>supalink — 👀 Share, engage and boom — link gone!</Title>
 			<Meta
 				name="description"
 				content="Share a shortlink for a limited amount of people, that destroys itsself after the maximum is reached. For free." />
@@ -9,7 +9,7 @@
 		</Head>
 
 		<section class="flex flex-col justify-center items-center text-center mt-8 tablet:mt-20 mx-auto">
-			<h1 class="h1-large">👀 Share, engange<br />and boom <i>—</i> link gone!</h1>
+			<h1 class="h1-large">👀 Share, engage<br />and boom <i>—</i> link gone!</h1>
 			<p class="mt-6 text-xl text-gray-400">
 				You want to share a shortlink for a limited amount of people,<br class="hidden tablet:block" />that destroys
 				itsself after the maximum is reached?
