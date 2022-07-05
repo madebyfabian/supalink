@@ -17,6 +17,7 @@ Create `.env` with:
 SUPABASE_URL=
 SUPABASE_KEY
 SUPABASE_SERVICE_KEY=
+CLOUDFLARE_ANALYTICS_TOKEN=
 ```
 
 ## Technical Setup

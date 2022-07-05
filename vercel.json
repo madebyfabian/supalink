@@ -1,0 +1,3 @@
+{
+	"rewrites": [{ "source": "/bacon", "destination": "https://cloudflareinsights.com/cdn-cgi/rum" }]
+}
