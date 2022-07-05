@@ -23,6 +23,9 @@
 						<Button type="submit" class="w-full justify-center">
 							{{ loading ? 'Hyping up... 🚀' : "Let's get started 💪" }}
 						</Button>
+						<p class="mt-4 text-sm text-gray-400">
+							We will never sell any data.<br />Delete your account and all your data at anytime.
+						</p>
 					</form>
 
 					<Alert v-if="success === true" alertType="success"> Cool! Check your inbox 📬 </Alert>
