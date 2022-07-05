@@ -1,42 +1,28 @@
-# Nuxt 3 Minimal Starter
+![Cover Art](public/images/og_image.jpg?raw=true 'Cover Art')
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+# supalinked.cc – 👀 Share, engange and boom — link gone!
+
+You want to share a shortlink for a limited amount of people,
+that destroys itsself after the maximum is reached?
+
+Now you can. For free. ✌️
+
+[https://supalinked.cc](https://supalinked.cc)
 
 ## Setup
 
-Make sure to install the dependencies:
+Create `.env` with:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+SUPABASE_URL=
+SUPABASE_KEY
+SUPABASE_SERVICE_KEY=
 ```
 
-## Development Server
+## Technical Setup
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+- Supabase as DB & Auth
+- Vercel as Deployment
+- Nuxt3 as Frontend
+- Tailwind as CSS Framework
+- +Jakarta Sans as Typography
