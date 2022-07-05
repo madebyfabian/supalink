@@ -6,7 +6,11 @@
 	const user = useSupabaseUser()
 	const router = useRouter()
 
-	watch(user, () => {
-		if (user.value) router.push('/manage')
+	watchEffect(user, () => {
+		if (user.value) {
+			setTimeout(() => {
+				router.push('/manage')
+			}, 500)
+		}
 	})
 </script>
