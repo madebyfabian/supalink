@@ -49,7 +49,7 @@
 
 		const { error } = await supabase.auth.signIn(
 			{ email: email.value },
-			{ redirectTo: 'http://localhost:3000/login-callback' }
+			{ redirectTo: window.location.origin + '/login-callback' }
 		)
 
 		loading.value = false
