@@ -23,6 +23,6 @@ SUPABASE_SERVICE_KEY=
 
 - Supabase as DB & Auth
 - Vercel as Deployment
-- Nuxt3 as Frontend
+- Nuxt3 as Frontend & Server
 - Tailwind as CSS Framework
 - +Jakarta Sans as Typography
