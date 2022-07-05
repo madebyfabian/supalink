@@ -1,5 +1,8 @@
 <template>
 	<div class="max-w-md mx-auto">
+		<Head>
+			<Title>🚀 You're getting redirected in a sec – supalink</Title>
+		</Head>
 		<div v-if="!pending">
 			<div v-if="!error" class="text-center mt-8 tablet:mt-20">
 				<Alert v-if="$route.query.preview === 'true'" alertType="error" class="mb-8">
@@ -41,9 +44,5 @@
 		setTimeout(() => {
 			window.location.href = data.value.data.url
 		}, 2000)
-	})
-
-	definePageMeta({
-		title: '🚀 You’re getting redirected in a sec',
 	})
 </script>
