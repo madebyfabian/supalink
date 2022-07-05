@@ -7,7 +7,7 @@ that destroys itsself after the maximum is reached?
 
 Now you can. For free. ✌️
 
-[https://supalinked.cc](https://supalinked.cc)
+[https://supalink.cc](https://supalink.cc)
 
 ## Setup
 
