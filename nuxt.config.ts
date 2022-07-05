@@ -2,9 +2,9 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-	head: {
+	meta: {
 		script: [
-			process.env.VERCEL_ENV === 'production'
+			process.env.NODE_ENV === 'production'
 				? {
 						src: '/cheeseburger.js',
 						defer: true,
