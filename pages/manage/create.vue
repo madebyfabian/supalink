@@ -1,5 +1,9 @@
 <template>
 	<div>
+		<Head>
+			<Title>Create New Link — supalinked</Title>
+		</Head>
+
 		<h1 class="mb-8">Create New Link</h1>
 		<form @submit.prevent="handleSubmit">
 			<div class="grid gap-8 grid-cols-1 tablet:grid-cols-2">
@@ -19,7 +23,6 @@
 
 <script lang="ts" setup>
 	definePageMeta({
-		title: 'Create New Link — supa_linked',
 		middleware: 'auth',
 	})
 

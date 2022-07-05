@@ -1,5 +1,9 @@
 <template>
 	<div>
+		<Head>
+			<Title>supalinked — 👀 Share, engange and boom — link gone!</Title>
+		</Head>
+
 		<section class="flex flex-col justify-center items-center text-center mt-8 tablet:mt-20 mx-auto">
 			<h1 class="h1-large">👀 Share, engange<br />and boom <i>—</i> link gone!</h1>
 			<p class="mt-6 text-xl text-gray-400">
@@ -31,10 +35,6 @@
 </template>
 
 <script setup>
-	definePageMeta({
-		title: 'supa_linked — 👀 Share, engange and boom — link gone!',
-	})
-
 	const user = useSupabaseUser()
 	const supabase = useSupabaseClient()
 	const router = useRouter()

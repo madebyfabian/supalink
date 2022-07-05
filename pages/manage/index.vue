@@ -1,5 +1,9 @@
 <template>
 	<div>
+		<Head>
+			<Title>Your Links — supalinked</Title>
+		</Head>
+
 		<div v-if="links">
 			<div class="mb-8 flex justify-between">
 				<h1>Your Links</h1>
@@ -58,7 +62,6 @@
 
 <script lang="ts" setup>
 	definePageMeta({
-		title: 'Your Links — supa_linked',
 		middleware: 'auth',
 	})
 

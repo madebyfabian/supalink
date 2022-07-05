@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<Head>
+			<Title>Your Account — supalinked</Title>
+		</Head>
 		<div class="mb-8">
 			<h1>Your Account</h1>
 			<p class="mt-3 text-gray-400">{{ user.email }}</p>
@@ -17,7 +20,6 @@
 
 <script lang="ts" setup>
 	definePageMeta({
-		title: 'Your Account — supa_linked',
 		middleware: 'auth',
 	})
 
