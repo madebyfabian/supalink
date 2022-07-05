@@ -1,5 +1,5 @@
 <template>
-	<div>...</div>
+	<div class="text-center">Loading...</div>
 </template>
 
 <script setup>
