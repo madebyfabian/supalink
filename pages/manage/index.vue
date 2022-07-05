@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Head>
-			<Title>Your Links — supalinked</Title>
+			<Title>Your Links — supalink</Title>
 		</Head>
 
 		<div v-if="links">

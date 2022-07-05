@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Head>
-			<Title>Your Account — supalinked</Title>
+			<Title>Your Account — supalink</Title>
 		</Head>
 		<div class="mb-8">
 			<h1>Your Account</h1>

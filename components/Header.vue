@@ -4,7 +4,7 @@
 			class="bg-gray-800 px-4 py-4 tablet:py-0 tablet:px-6 -mx-4 tablet:-mx-6 rounded-3xl flex flex-wrap justify-between items-center h-auto gap-4 tablet:h-24">
 			<NuxtLink to="/" class="font-extrabold tracking-tighter text-2xl">
 				supa
-				<i class="text-primary">_linked</i>
+				<i class="text-primary">_link</i>
 			</NuxtLink>
 
 			<nav class="min-w-0">

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Head>
-			<Title>Create New Link — supalinked</Title>
+			<Title>Create New Link — supalink</Title>
 		</Head>
 
 		<h1 class="mb-8">Create New Link</h1>
