@@ -12,7 +12,7 @@
 
 			<section class="rounded-2xl border-2 border-gray-800">
 				<ul class="divide-y-2 divide-solid divide-gray-800">
-					<li v-for="link of links" class="px-6 py-4 flex flex-col tablet:flex-row gap-4 tablet:gap-6">
+					<li v-for="link of links" class="px-6 py-4 flex flex-col desktop:flex-row gap-4 desktop:gap-6">
 						<LabelValue class="shrink-0 w-20 tabular-nums tracking-wide font-semibold">
 							<template #label>#ID</template>
 							{{ link.shortcode }}
@@ -27,26 +27,43 @@
 
 						<LabelValue>
 							<template #label>Link the user will see:</template>
-							<span class="font-semibold">
+							<span
+								class="font-semibold text-ellipsis overflow-hidden whitespace-nowrap block max-w-xs"
+								:title="link.url">
 								{{ link.url }}
 							</span>
 						</LabelValue>
 
-						<div class="flex flex-col justify-start tablet:justify-end grow tablet:flex-row gap-2 tablet:gap-8">
-							<div class="flex gap-6 items-start tablet:items-center">
+						<div class="flex flex-col justify-start desktop:justify-end grow desktop:flex-row gap-2 desktop:gap-8">
+							<div class="flex gap-6 items-start desktop:items-center">
 								<template v-if="link.clicked_amount < link.max_clicked_amount">
 									<NuxtLink
 										:to="`/l/${link.shortcode}?preview=true`"
 										target="_blank"
-										class="inline-flex text-primary font-semibold">
-										Preview URL ↗
+										class="whitespace-nowrap inline-flex text-primary font-semibold">
+										Preview ↗
 									</NuxtLink>
-									<button class="inline-flex text-primary font-semibold" @click="() => copyLinkToClipboard(link.id)">
+									<button
+										class="whitespace-nowrap inline-flex text-primary font-semibold"
+										@click="() => copyLinkToClipboard(link.id)">
 										Copy URL
 									</button>
 								</template>
-								<div v-else class="text-gray-400">Link exceeded.</div>
-								<button class="inline-flex text-red-300 font-semibold" @click="() => deleteLink(link)">Delete</button>
+
+								<template v-else>
+									<div class="text-gray-400">Link exceeded.</div>
+									<button
+										class="whitespace-nowrap inline-flex text-primary font-semibold"
+										@click="() => resetLinkCounter(link)">
+										Reset Counter
+									</button>
+								</template>
+
+								<button
+									class="whitespace-nowrap inline-flex text-red-300 font-semibold"
+									@click="() => deleteLink(link)">
+									Delete
+								</button>
 							</div>
 						</div>
 					</li>
@@ -72,7 +89,11 @@
 	const error = ref(null)
 
 	const fetchLinks = async () => {
-		const { data, error: resErr } = await supabase.from('links').select('*').eq('user_id', user.value.id)
+		const { data, error: resErr } = await supabase
+			.from('links')
+			.select('*')
+			.eq('user_id', user.value.id)
+			.order('id', { ascending: false })
 		links.value = data
 		error.value = resErr
 	}
@@ -92,6 +113,22 @@
 			alert('Copied to clipboard!')
 		} catch (error) {
 			prompt('Could not copy to clipboard, please copy it from here:', url)
+		}
+	}
+
+	const resetLinkCounter = async (link: any) => {
+		if (!confirm('Do you want to reset the counter for this link?')) return
+
+		try {
+			const { error: deleteLinkErr } = await supabase.from('links').update({ clicked_amount: 0 }).eq('id', link.id)
+			if (deleteLinkErr) throw new Error('Error resetting `links` counter')
+
+			fetchLinks()
+
+			alert('Successfully reset link counter.')
+		} catch (error) {
+			console.error(error)
+			alert('Something went wrong...')
 		}
 	}
 
