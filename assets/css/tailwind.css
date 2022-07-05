@@ -44,13 +44,40 @@
 		@apply flex flex-col min-h-screen;
 	}
 
+	h1.h1-large,
+	.h1-like.h1-large {
+		@apply font-extrabold text-5xl tablet:text-6xl;
+	}
+
 	h1,
 	.h1-like {
 		@apply font-extrabold text-4xl;
 
 		&::after {
 			content: '_';
-			@apply text-primary;
+			@apply text-primary italic;
+		}
+	}
+
+	h2,
+	.h2-like {
+		@apply font-extrabold text-2xl;
+
+		&::after {
+			content: '_';
+			@apply text-primary italic;
+		}
+	}
+
+	input {
+		@apply bg-gray-800 border-2 border-gray-700 px-4 py-3 rounded-xl transition-colors;
+
+		&:focus {
+			@apply border-primary outline-none;
+		}
+
+		&[readonly] {
+			@apply border-gray-800 bg-gray-900 text-gray-500;
 		}
 	}
 
