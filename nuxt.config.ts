@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
 	head: {
 		script: [
-			process.env.NODE_ENV === 'production'
+			process.env.VERCEL_ENV === 'production'
 				? {
 						src: '/cheeseburger.js',
 						defer: true,
