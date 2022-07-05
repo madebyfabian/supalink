@@ -11,8 +11,7 @@
 	const supabase = useSupabaseClient()
 
 	onMounted(async () => {
-		const { error } = await supabase.auth?.signOut()
-		if (error) return alert('Error while trying to sign out. Please try again.')
+		await supabase.auth?.signOut()
 		await nextTick()
 		return router.push('/')
 	})
